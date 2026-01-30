@@ -6,7 +6,20 @@ const contactRoutes = require('./route');
 const app = express();
 
 // Middleware
-app.use(cors());
+import cors from "cors";
+
+import cors from "cors";
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://schoolwebtask.onrender.com"
+    ]
+  })
+);
+
+
 app.use(express.json());
 require('dotenv').config();
 
